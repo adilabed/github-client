@@ -4,6 +4,7 @@ import { render } from "react-blessed"
 import * as dotenv from "dotenv"
 import { App } from "./App"
 import { MemoryRouter } from "react-router"
+import {ClientProvider} from "./auth/ClientProvider";
 
 dotenv.config()
 
@@ -24,8 +25,9 @@ screen.key(["q", "C-c"], () => process.exit(0))
 
 const component = render(
   <MemoryRouter>
-    <App />
-  </MemoryRouter>
-  ,
+    <ClientProvider>
+      <App />
+    </ClientProvider>
+  </MemoryRouter>,
   screen
 )
