@@ -1,4 +1,3 @@
-// @ts-ignore
 import React, {FC, PropsWithChildren} from "react"
 import {useState} from "react"
 import {useEffect} from "react"

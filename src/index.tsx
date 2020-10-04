@@ -5,6 +5,7 @@ import * as dotenv from "dotenv"
 import { App } from "./App"
 import { MemoryRouter } from "react-router"
 import {ClientProvider} from "./auth/ClientProvider";
+import {ErrorBoundary} from "./ErrorBoundary";
 
 dotenv.config()
 
@@ -24,10 +25,12 @@ const screen = blessed.screen({
 screen.key(["q", "C-c"], () => process.exit(0))
 
 const component = render(
-  <MemoryRouter>
-    <ClientProvider>
-      <App />
-    </ClientProvider>
-  </MemoryRouter>,
+  <ErrorBoundary>
+    <MemoryRouter>
+      <ClientProvider>
+        <App />
+      </ClientProvider>
+    </MemoryRouter>
+  </ErrorBoundary>,
   screen
 )

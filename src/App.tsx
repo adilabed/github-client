@@ -1,5 +1,5 @@
-// @ts-ignore
 import React from 'react'
+import {WelcomeWindow} from "./WelcomeWindow";
 
 export const App = () => {
   return (
@@ -8,7 +8,7 @@ export const App = () => {
         bg: "#0000ff"
       }}
     >
-      Hello React-Blessed
+      <WelcomeWindow />
     </blessed-box>
   )
 }
