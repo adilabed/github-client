@@ -8,7 +8,7 @@ export const App = () => {
         bg: "#0000ff"
       }}
     >
-      <WelcomeWindow />
+      <WelcomeWindow/>
     </blessed-box>
   )
 }

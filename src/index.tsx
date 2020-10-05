@@ -1,9 +1,9 @@
 import React from "react"
 import blessed from "blessed"
-import { render } from "react-blessed"
+import {render} from "react-blessed"
 import * as dotenv from "dotenv"
-import { App } from "./App"
-import { MemoryRouter } from "react-router"
+import {App} from "./App"
+import {MemoryRouter} from "react-router"
 import {ClientProvider} from "./auth/ClientProvider";
 import {ErrorBoundary} from "./ErrorBoundary";
 
@@ -28,7 +28,7 @@ const component = render(
   <ErrorBoundary>
     <MemoryRouter>
       <ClientProvider>
-        <App />
+        <App/>
       </ClientProvider>
     </MemoryRouter>
   </ErrorBoundary>,
